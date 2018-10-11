@@ -96,6 +96,14 @@ Write a for-loop that will sum up odd numbers to the `oddSum` variable. We want 
 Console.log your results.
 */
   
+var oddSum = 0;
+for(var i = 1; i<100; i++){
+  if(i%2 === 1){
+    oddSum += i;
+
+  }
+}
+console.log(oddSum);
 
 /* 7) Oops There It is
 Declare a variable named `oopsArray` and assign its to the following array: `[ 'turn' , , 'down' , , 'for' , , 'what' ]`.
@@ -104,6 +112,13 @@ Note that every odd index value in `oopsArray` is currently `undefined`. Using a
 [ 'turn' , 'nope' , 'down' , 'nope' , 'for' , 'nope' , 'what' ]
 */
 
+var oopsArray = ['turn', ,'down', ,'for', ,'what'];
+for(var i = 0; i<oopsArray.length; i++){
+  if(i%2 === 1){
+    oopsArray[i] = "nope";
+  }
+}
+console.log(oopsArray);
 
 /* 8) Is It There Oops
 Using a for-loop, iterate through the Array stored at `oopsArray` backwards. Console.log your result. It should look like this:
@@ -117,6 +132,10 @@ nope
 turn
 */
 
+for(var i = 0; i<oopsArray.length; i++){
+  oopsArray.reverse(i);
+}
+console.log(oopsArray);
 
 /* 9) Siesta Time
 Declare a variable named `napSchedule` and assign its value to the following array: `[false, false, true, false, true, true]`
@@ -128,6 +147,17 @@ Next, write a function named `nap`. This function takes in a single parameter: `
 Inside of this function write a for-loop that will iterate through the `napSchedule` array and console.log the message: `ZzZzZzZz` if the schedule is `true`, otherwise the it will console.log the message: `Gotta get coding!` if the schedule is `false`.
 */
 
+var napSchedule = [false, false, true, false, true, true];
+function nap(schedule){
+  for(var i = 0; i<napSchedule.length; i++){
+    if(i === true){
+      return "ZzZzZz";
+    }else{
+      return "Gotta get coding";
+    }
+  }
+}
+console.log(nap(napSchedule));
 
 
 /* 10) Copy Pasta
@@ -142,7 +172,16 @@ Write a function named `copyArray` which takes two arguments: `originArray` and 
 Inside of this function write a for-loop that will iterate through the contents of the `originArray` and pushes each element of that array into `destinationArray`. Console.log your result.
 */
 
+var valuesArray = [99, 66, 829, 1941, 8, 76];
+var copyValuesArray = [];
 
+function copyArray(originArray, destinationArray){
+  for(var i = 0; i<originArray.length; i++){
+    destinationArray.push(originArray[i]);
+  }
+  return destinationArray;
+}
+console.log("Answer:", copyArray(valuesArray,copyValuesArray));
 
 /*Final Boss*/
 
